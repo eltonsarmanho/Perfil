@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profissional - Elton Sarmanho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .tag {
+            background-color: #e0e7ff; /* Indigo-100 */
+            color: #3730a3; /* Indigo-800 */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; /* pill shape */
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .icon-link {
+            transition: color 0.3s ease;
+        }
+        .icon-link:hover {
+            color: #4f46e5; /* Indigo-600 */
+        }
+        .section-title {
+            border-bottom: 2px solid #4f46e5; /* Indigo-600 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937; /* Gray-800 */
+        }
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4f46e5; /* Indigo-600 */
+        }
+         /* Estilo para o cabeçalho fixo */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <header class="sticky-header p-6 md:p-8">
+        <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-6 md:mb-0">
+                <img src="image_c5ee17.png" alt="Foto de Elton Sarmanho" class="profile-img mr-6"
+                     onerror="this.onerror=null; this.src='https://placehold.co/160x160/6366f1/ffffff?text=ES&font=Inter';">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Elton Sarmanho</h1>
+                    <p class="text-xl text-indigo-600 font-medium">Professor e Pesquisador - Especialista em IA</p>
+                </div>
+            </div>
+            <div class="flex space-x-4">
+                <a href="mailto:eltonss@ufpa.br" class="text-gray-600 hover:text-indigo-600 icon-link text-2xl" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com/in/elton-sarmanho-836553185" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-indigo-600 icon-link text-2xl" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/eltonsarmanho" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-indigo-600 icon-link text-2xl" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                 <a href="http://lattes.cnpq.br/6836143760585970" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-indigo-600 icon-link text-2xl" title="Lattes CV">
+                    <i class="fas fa-graduation-cap"></i> </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto max-w-5xl p-6 md:p-8">
+
+        <section id="resumo" class="mb-12">
+            <div class="card p-6 md:p-8">
+                <h2 class="section-title"><i class="fas fa-user-tie mr-2 text-indigo-600"></i>Resumo Profissional</h2>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    Professor e pesquisador na Universidade Federal do Pará (UFPA) com experiência em Inteligência Artificial,
+                    Aprendizado de Máquina, Big Data, visualização da informação e Processamento de Linguagem Natural.
+                    Atua em projetos com LangChain, OCR, análise de dados psicofisiológicos e sistemas de busca semântica.
+                </p>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <section id="educacao" class="card p-6 md:p-8">
+                <h2 class="section-title"><i class="fas fa-graduation-cap mr-2 text-indigo-600"></i>Educação</h2>
+                <ul class="space-y-4">
+                    <li>
+                        <h3 class="font-semibold text-lg text-gray-800">Doutorado em Ciência da Computação</h3>
+                        <p class="text-gray-600">Universidade de Brasília (UnB), 2015-2022</p>
+                        <p class="text-sm text-gray-500">Enfoque em IA, PLN e Sistemas Interativos.</p>
+                    </li>
+                    <li>
+                        <h3 class="font-semibold text-lg text-gray-800">Mestrado em Tecnologia da Informação</h3>
+                        <p class="text-gray-600">Universidade Federal do Pará (UFPA), 2010-2012</p>
+                        <p class="text-sm text-gray-500">Pesquisa em sistemas inteligentes e acessibilidade.</p>
+                    </li>
+                    <li>
+                        <h3 class="font-semibold text-lg text-gray-800">Bacharelado em Sistemas de Informação</h3>
+                        <p class="text-gray-600">Universidade Federal do Pará (UFPA), 2005-2009</p>
+                    </li>
+                    <li>
+                        <h3 class="font-semibold text-lg text-gray-800">Licenciatura em Física</h3>
+                        <p class="text-gray-600">Centro Federal de Educação Tecnológica (CEFET-PA), 2005-2008</p>
+                        <p class="text-sm text-gray-500">Pesquisas em sensoriamento remoto.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="experiencia" class="card p-6 md:p-8">
+                <h2 class="section-title"><i class="fas fa-briefcase mr-2 text-indigo-600"></i>Experiência Profissional</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800">Professor Adjunto IV</h3>
+                        <p class="text-gray-600">UFPA - Universidade Federal do Pará, Cametá, PA (2012 - Atual)</p>
+                        <p class="text-sm text-gray-700 mt-1">Vice-diretor da Faculdade de Sistemas de Informação. Atua com ensino, pesquisa e extensão nas áreas de IA, computação aplicada, educação assistida por tecnologia e LaTeX.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800">Desenvolvedor Backend</h3>
+                        <p class="text-gray-600">Autônomo, Belém, PA (2012 - Atual)</p>
+                        <p class="text-sm text-gray-700 mt-1">Desenvolvimento backend em Python, APIs REST (FastAPI, Flask), bancos de dados (PostgreSQL, pgvector), LangChain, LLMs, OCR, NLP.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="projetos" class="mb-12">
+            <div class="card p-6 md:p-8">
+                <h2 class="section-title"><i class="fas fa-cogs mr-2 text-indigo-600"></i>Projetos Profissionais</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800">IARA (Inteligência Artificial para Registros de Imóveis)</h3>
+                        <p class="text-gray-600">2024-2025</p>
+                        <p class="text-sm text-gray-700 mt-1">Sistema de análise e extração automática de dados de matrículas imobiliárias (OCR, embeddings semânticos, LLMs - OpenAI, Gemini, Maritaca). Implementado com LangChain, FastAPI, PostgreSQL e pgvector.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800">RPA na Automação de Processos Acadêmicos</h3>
+                        <p class="text-gray-600">2023-2024</p>
+                        <p class="text-sm text-gray-700 mt-1">Automações com Power Automate e Python para otimizar processos administrativos da Faculdade de Sistemas de Informação da UFPA/Cametá.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800">Dashboard Inteligente de Monitoramento de Treinos</h3>
+                        <p class="text-gray-600">2024-2025</p>
+                        <p class="text-sm text-gray-700 mt-1">Visualização de treinos físicos com gráficos e análises alimentadas por IA, oferecendo recomendações personalizadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <section id="conquistas" class="card p-6 md:p-8">
+                <h2 class="section-title"><i class="fas fa-trophy mr-2 text-indigo-600"></i>Conquistas Chave</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Expansão da base de clientes em 30% em um ano.</li>
+                    <li>Desenvolveu modelos preditivos que melhoraram a eficiência em 25%.</li>
+                    <li>Implementou programa de treinamento, reduzindo erros operacionais em 15%.</li>
+                    <li>Liderou equipe de pesquisa que publicou 10 artigos em dois anos.</li>
+                </ul>
+            </section>
+
+            <section id="certificacoes" class="card p-6 md:p-8">
+                <h2 class="section-title"><i class="fas fa-certificate mr-2 text-indigo-600"></i>Certificações</h2>
+                <ul class="space-y-3">
+                    <li>
+                        <h3 class="font-medium text-gray-800">Fundamentos de Inteligência Artificial e Aprendizado de Máquina (2023)</h3>
+                        <p class="text-sm text-gray-600">Princípios básicos de IA e técnicas de aprendizado de máquina.</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-800">Desenvolvimento de Aplicações com Python (2022)</h3>
+                        <p class="text-sm text-gray-600">Programação Python para desenvolvimento e automação.</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-800">Introdução ao Processamento de Linguagem Natural (NLP) (2021)</h3>
+                        <p class="text-sm text-gray-600">Técnicas fundamentais de NLP, análise de texto e modelagem.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6">
+        <p>&copy; <span id="currentYear"></span> Elton Sarmanho. Todos os direitos reservados.</p>
+        <p class="text-sm text-gray-400 mt-1">Gerado com assistência de IA.</p>
+    </footer>
+
+    <script>
+        // Define o ano atual no rodapé
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
