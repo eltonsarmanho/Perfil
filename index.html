@@ -68,7 +68,7 @@
                 <img src="image_c5ee17.png" alt="Foto de Elton Sarmanho" class="profile-img mr-6"
                      onerror="this.onerror=null; this.src='https://placehold.co/160x160/6366f1/ffffff?text=ES&font=Inter';">
                 <div>
-                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Elton Sarmanho</h1>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900" id="profile-name">Elton Sarmanho</h1>
                     <p class="text-xl text-indigo-600 font-medium">Professor, Desenvolvedor e Cientista de dados - Especialista em IA</p>
                 </div>
             </div>
@@ -100,8 +100,8 @@
 
         <section id="resumo" class="mb-12">
             <div class="card p-6 md:p-8">
-                <h2 class="section-title"><i class="fas fa-user-tie mr-2 text-indigo-600"></i>Resumo Profissional</h2>
-                <p class="text-lg leading-relaxed text-gray-700">
+<h2 class="section-title" id="resumo-title"><i class="fas fa-user-tie mr-2 text-indigo-600"></i>Resumo Profissional</h2>
+<p class="text-lg leading-relaxed text-gray-700" id="profile-summary">
                     Professor na Universidade Federal do Pará (UFPA) com experiência em Inteligência Artificial,
                     Aprendizado de Máquina, Big Data, visualização da informação e Processamento de Linguagem Natural. 
                     Cientista de dados e desenvolvedor de software com experiência em Python. 
@@ -286,14 +286,33 @@
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 <script>
-    // Define o ano atual no rodapé
     document.getElementById('currentYear').textContent = new Date().getFullYear();
-    // Seletor de idioma (exemplo simples)
+
+    const enTexts = {
+        name: "Elton Sarmanho",
+        title: "Professor, Developer and Data Scientist - AI Specialist",
+        summary: "Professor at the Federal University of Pará (UFPA) with experience in Artificial Intelligence, Machine Learning, Big Data, information visualization, and Natural Language Processing. Data scientist and software developer with experience in Python. Works on projects with LangChain, OCR, psychophysiological data analysis, and semantic search systems.",
+        resumoTitle: "Professional Summary"
+    };
+    const ptTexts = {
+        name: "Elton Sarmanho",
+        title: "Professor, Desenvolvedor e Cientista de dados - Especialista em IA",
+        summary: "Professor na Universidade Federal do Pará (UFPA) com experiência em Inteligência Artificial, Aprendizado de Máquina, Big Data, visualização da informação e Processamento de Linguagem Natural. Cientista de dados e desenvolvedor de software com experiência em Python. Atua em projetos com LangChain, OCR, análise de dados psicofisiológicos e sistemas de busca semântica.",
+        resumoTitle: "Resumo Profissional"
+    };
+
     document.getElementById('lang-select').addEventListener('change', function(e) {
-        if (e.target.value === 'en') {
-            alert('English version coming soon!');
+        const lang = e.target.value;
+        if (lang === 'en') {
+            document.getElementById('profile-name').textContent = enTexts.name;
+            document.getElementById('profile-title').textContent = enTexts.title;
+            document.getElementById('profile-summary').textContent = enTexts.summary;
+            document.getElementById('resumo-title').innerHTML = '<i class="fas fa-user-tie mr-2 text-indigo-600"></i>' + enTexts.resumoTitle;
         } else {
-            alert('Versão em português!');
+            document.getElementById('profile-name').textContent = ptTexts.name;
+            document.getElementById('profile-title').textContent = ptTexts.title;
+            document.getElementById('profile-summary').textContent = ptTexts.summary;
+            document.getElementById('resumo-title').innerHTML = '<i class="fas fa-user-tie mr-2 text-indigo-600"></i>' + ptTexts.resumoTitle;
         }
     });
 </script>
