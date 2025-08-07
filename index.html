@@ -69,7 +69,7 @@
                      onerror="this.onerror=null; this.src='https://placehold.co/160x160/6366f1/ffffff?text=ES&font=Inter';">
                 <div>
                     <h1 class="text-3xl md:text-4xl font-bold text-gray-900" id="profile-name">Elton Sarmanho</h1>
-                    <p class="text-xl text-indigo-600 font-medium">Professor, Desenvolvedor e Cientista de dados - Especialista em IA</p>
+                    <p class="text-xl text-indigo-600 font-medium" data-key="profileTitle">Professor, Desenvolvedor e Cientista de dados - Especialista em IA</p>
                 </div>
             </div>
             <div class="flex space-x-4">
@@ -93,15 +93,13 @@
         </div>
      
     </header>
-    <!-- Seletor de idioma -->
-
-
+    
     <main class="container mx-auto max-w-5xl p-6 md:p-8">
 
         <section id="resumo" class="mb-12">
             <div class="card p-6 md:p-8">
-<h2 class="section-title" id="resumo-title"><i class="fas fa-user-tie mr-2 text-indigo-600"></i>Resumo Profissional</h2>
-<p class="text-lg leading-relaxed text-gray-700" id="profile-summary">
+                <h2 class="section-title" data-key="professionalSummaryTitle"><i class="fas fa-user-tie mr-2 text-indigo-600"></i>Resumo Profissional</h2>
+                <p class="text-lg leading-relaxed text-gray-700" data-key="professionalSummaryText">
                     Professor na Universidade Federal do Pará (UFPA) com experiência em Inteligência Artificial,
                     Aprendizado de Máquina, Big Data, visualização da informação e Processamento de Linguagem Natural. 
                     Cientista de dados e desenvolvedor de software com experiência em Python. 
@@ -112,47 +110,47 @@
 
         <div class="grid md:grid-cols-2 gap-8 mb-12">
             <section id="educacao" class="card p-6 md:p-8">
-                <h2 class="section-title"><i class="fas fa-graduation-cap mr-2 text-indigo-600"></i>Educação</h2>
+                <h2 class="section-title" data-key="educationTitle"><i class="fas fa-graduation-cap mr-2 text-indigo-600"></i>Educação</h2>
                 <ul class="space-y-4">
                     <li>
-                        <h3 class="font-semibold text-lg text-gray-800">Doutorado em Ciência da Computação</h3>
-                        <p class="text-gray-600">Universidade de Brasília (UnB), 2015-2022</p>
-                        <p class="text-sm text-gray-500">Enfoque em IA, PLN e Sistemas Interativos.</p>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="phdTitle">Doutorado em Ciência da Computação</h3>
+                        <p class="text-gray-600" data-key="phdLocation">Universidade de Brasília (UnB), 2015-2022</p>
+                        <p class="text-sm text-gray-500" data-key="phdDescription">Enfoque em IA, PLN e Sistemas Interativos.</p>
                     </li>
                     <li>
-                        <h3 class="font-semibold text-lg text-gray-800">Mestrado em Tecnologia da Informação</h3>
-                        <p class="text-gray-600">Universidade Federal do Pará (UFPA), 2010-2012</p>
-                        <p class="text-sm text-gray-500">Pesquisa em sistemas inteligentes e acessibilidade.</p>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="mscTitle">Mestrado em Tecnologia da Informação</h3>
+                        <p class="text-gray-600" data-key="mscLocation">Universidade Federal do Pará (UFPA), 2010-2012</p>
+                        <p class="text-sm text-gray-500" data-key="mscDescription">Pesquisa em sistemas inteligentes e acessibilidade.</p>
                     </li>
                     <li>
-                        <h3 class="font-semibold text-lg text-gray-800">Bacharelado em Sistemas de Informação</h3>
-                        <p class="text-gray-600">Universidade Federal do Pará (UFPA), 2005-2009</p>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="bachelorTitle">Bacharelado em Sistemas de Informação</h3>
+                        <p class="text-gray-600" data-key="bachelorLocation">Universidade Federal do Pará (UFPA), 2005-2009</p>
                     </li>
                     <li>
-                        <h3 class="font-semibold text-lg text-gray-800">Licenciatura em Física</h3>
-                        <p class="text-gray-600">Centro Federal de Educação Tecnológica (CEFET-PA), 2005-2008</p>
-                        <p class="text-sm text-gray-500">Pesquisas em sensoriamento remoto.</p>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="licentiateTitle">Licenciatura em Física</h3>
+                        <p class="text-gray-600" data-key="licentiateLocation">Centro Federal de Educação Tecnológica (CEFET-PA), 2005-2008</p>
+                        <p class="text-sm text-gray-500" data-key="licentiateDescription">Pesquisas em sensoriamento remoto.</p>
                     </li>
                 </ul>
             </section>
 
             <section id="experiencia" class="card p-6 md:p-8">
-                <h2 class="section-title"><i class="fas fa-briefcase mr-2 text-indigo-600"></i>Experiência Profissional</h2>
+                <h2 class="section-title" data-key="experienceTitle"><i class="fas fa-briefcase mr-2 text-indigo-600"></i>Experiência Profissional</h2>
                 <div class="space-y-6">
                     <div>
-                        <h3 class="font-semibold text-lg text-gray-800">Professor Associado I</h3>
-                        <p class="text-gray-600">UFPA - Universidade Federal do Pará, Cametá, PA (2012 - Atual)</p>
-                        <p class="text-sm text-gray-700 mt-1">Diretor da Faculdade de Sistemas de Informação. Atua com ensino, pesquisa e extensão nas áreas de IA, computação aplicada, educação assistida por tecnologia e LaTeX.</p>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="assocProfTitle">Professor Associado I</h3>
+                        <p class="text-gray-600" data-key="assocProfLocation">UFPA - Universidade Federal do Pará, Cametá, PA (2012 - Atual)</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="assocProfDescription">Diretor da Faculdade de Sistemas de Informação. Atua com ensino, pesquisa e extensão nas áreas de IA, computação aplicada, educação assistida por tecnologia e LaTeX.</p>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-lg text-gray-800">Desenvolvedor Backend</h3>
-                        <p class="text-gray-600">Autônomo, Belém, PA (2012 - Atual)</p>
-                        <p class="text-sm text-gray-700 mt-1">Desenvolvimento backend em Python, APIs REST (FastAPI, Flask), bancos de dados (PostgreSQL, pgvector), LangChain, LLMs, OCR, NLP.</p>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="backendDevTitle">Desenvolvedor Backend</h3>
+                        <p class="text-gray-600" data-key="backendDevLocation">Autônomo, Belém, PA (2012 - Atual)</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="backendDevDescription">Desenvolvimento backend em Python, APIs REST (FastAPI, Flask), bancos de dados (PostgreSQL, pgvector), LangChain, LLMs, OCR, NLP.</p>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-lg text-gray-800">Sócio Fundador</h3>
-                        <p class="text-gray-600">Flow Design Consultancy (2022 - atual)</p>
-                        <p class="text-sm text-gray-700 mt-1">Atuação como fundador com foco em design estratégico e soluções baseadas em tecnologia. Local: Brasília, DF.</p>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="founderTitle">Sócio Fundador</h3>
+                        <p class="text-gray-600" data-key="founderLocation">Flow Design Consultancy (2022 - atual)</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="founderDescription">Atuação como fundador com foco em design estratégico e soluções baseadas em tecnologia. Local: Brasília, DF.</p>
                     </div>
                 </div>
             </section>
@@ -160,22 +158,22 @@
 
         <section id="projetos" class="mb-12">
             <div class="card p-6 md:p-8">
-                <h2 class="section-title"><i class="fas fa-cogs mr-2 text-indigo-600"></i>Projetos Profissionais</h2>
+                <h2 class="section-title" data-key="projectsTitle"><i class="fas fa-cogs mr-2 text-indigo-600"></i>Projetos Profissionais</h2>
                 <div class="space-y-6">
                     <div>
-                        <h3 class="font-semibold text-lg text-gray-800">IARA (Inteligência Artificial para Registros de Imóveis)</h3>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="iaraTitle">IARA (Inteligência Artificial para Registros de Imóveis)</h3>
                         <p class="text-gray-600">2024-2025</p>
-                        <p class="text-sm text-gray-700 mt-1">Sistema de análise e extração automática de dados de matrículas imobiliárias (OCR, embeddings semânticos, LLMs - OpenAI, Gemini, Maritaca). Implementado com LangChain, FastAPI, PostgreSQL e Streamlit.</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="iaraDescription">Sistema de análise e extração automática de dados de matrículas imobiliárias (OCR, embeddings semânticos, LLMs - OpenAI, Gemini, Maritaca). Implementado com LangChain, FastAPI, PostgreSQL e Streamlit.</p>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-lg text-gray-800">RPA na Automação de Processos Acadêmicos</h3>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="rpaTitle">RPA na Automação de Processos Acadêmicos</h3>
                         <p class="text-gray-600">2023-2024</p>
-                        <p class="text-sm text-gray-700 mt-1">Automações com Python e Google Workspace para otimizar processos administrativos da Faculdade de Sistemas de Informação da UFPA/Cametá.</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="rpaDescription">Automações com Python e Google Workspace para otimizar processos administrativos da Faculdade de Sistemas de Informação da UFPA/Cametá.</p>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-lg text-gray-800">Dashboard Inteligente de Monitoramento de Treinos</h3>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="dashboardTitle">Dashboard Inteligente de Monitoramento de Treinos</h3>
                         <p class="text-gray-600">2024-2025</p>
-                        <p class="text-sm text-gray-700 mt-1">Visualização de treinos físicos com gráficos e análises alimentadas por IA, oferecendo recomendações personalizadas.</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="dashboardDescription">Visualização de treinos físicos com gráficos e análises alimentadas por IA, oferecendo recomendações personalizadas.</p>
                     </div>
                 </div>
             </div>
@@ -183,91 +181,87 @@
 
         <div class="space-y-8 mb-12">
             <section id="conquistas" class="card p-6 md:p-8">
-                <h2 class="section-title"><i class="fas fa-trophy mr-2 text-indigo-600"></i>Conquistas Chave</h2>
+                <h2 class="section-title" data-key="achievementsTitle"><i class="fas fa-trophy mr-2 text-indigo-600"></i>Conquistas Chave</h2>
                 <ul class="list-disc list-inside space-y-2 text-gray-700">
-                    <li>Desenvolveu RPA para otimizar processos, melhorando a eficiência nos serviços administrativos.</li>
-                    <li>Implementou programa de treinamento, reduzindo erros operacionais.</li>
-                    <li>Implementação de sistemas na administração pública e privada.</li>
+                    <li data-key="achievement1">Desenvolveu RPA para otimizar processos, melhorando a eficiência nos serviços administrativos.</li>
+                    <li data-key="achievement2">Implementou programa de treinamento, reduzindo erros operacionais.</li>
+                    <li data-key="achievement3">Implementação de sistemas na administração pública e privada.</li>
                 </ul>
             </section>
 
             <section id="certificacoes" class="card p-6 md:p-8">
-                <h2 class="section-title"><i class="fas fa-certificate mr-2 text-indigo-600"></i>Certificações</h2>
+                <h2 class="section-title" data-key="certificationsTitle"><i class="fas fa-certificate mr-2 text-indigo-600"></i>Certificações</h2>
                 <div class="my-4 text-center">
-                    <!-- Opcional: Adicione o link da sua credencial no href="#" -->
                     <a href="#" title="Verificar credencial AWS Academy">
                         <img src="aws-academy-educator.png" alt="Selo de Educador Credenciado da AWS Academy" class="mx-auto h-auto" style="max-width: 200px;">
                     </a>
                 </div>
                 <ul class="space-y-3 text-gray-700">
-                    <li><strong>Aplicações de IA com LangChain</strong></li>
-                    <li><strong>Criando Aplicativos Web com Streamlit</strong></li>
-                    <li><strong>Visão Computacional com OpenCV</strong></li>
-                    <li><strong>MongoDB: conhecendo um banco de dados NoSQL</strong></li>
-                    <li><strong>Data Visualization: gráficos de comparação e distribuição</strong></li>
-                    <li><strong>Spark: apresentando a ferramenta</strong></li>
-                    <li><strong>Introduction to Natural Language Processing in Python</strong></li>
-                    <li><strong>Dimensionality Reduction in Python</strong></li>
-                    <li><strong>Inteligência Artificial para Prever Preços de Ações</strong></li>
-                    <li><strong>Machine Learning with scikit-learn</strong></li>
-                    <li><strong>Introduction to Deep Learning in Python (PyTorch)</strong></li>
-                    <li><strong>Criatividade e Novas Tecnologias no Serviço Público</strong></li>
-                    <li><strong>Machine Learning with Python: A Practical Introduction</strong></li>
-                    <li><strong>Produção Escrita de Inglês: parágrafos nível B1</strong></li>
-                    <li><strong>Inglês Básico/Pré-Intermediário/Intermediário</strong></li>
-                    <li><strong>LGPD: conhecendo e entendendo seus impactos</strong></li>
+                    <li data-key="cert1"><strong>Aplicações de IA com LangChain</strong></li>
+                    <li data-key="cert2"><strong>Criando Aplicativos Web com Streamlit</strong></li>
+                    <li data-key="cert3"><strong>Visão Computacional com OpenCV</strong></li>
+                    <li data-key="cert4"><strong>MongoDB: conhecendo um banco de dados NoSQL</strong></li>
+                    <li data-key="cert5"><strong>Data Visualization: gráficos de comparação e distribuição</strong></li>
+                    <li data-key="cert6"><strong>Spark: apresentando a ferramenta</strong></li>
+                    <li data-key="cert7"><strong>Introduction to Natural Language Processing in Python</strong></li>
+                    <li data-key="cert8"><strong>Dimensionality Reduction in Python</strong></li>
+                    <li data-key="cert9"><strong>Inteligência Artificial para Prever Preços de Ações</strong></li>
+                    <li data-key="cert10"><strong>Machine Learning with scikit-learn</strong></li>
+                    <li data-key="cert11"><strong>Introduction to Deep Learning in Python (PyTorch)</strong></li>
+                    <li data-key="cert12"><strong>Criatividade e Novas Tecnologias no Serviço Público</strong></li>
+                    <li data-key="cert13"><strong>Machine Learning with Python: A Practical Introduction</strong></li>
+                    <li data-key="cert14"><strong>Produção Escrita de Inglês: parágrafos nível B1</strong></li>
+                    <li data-key="cert15"><strong>Inglês Básico/Pré-Intermediário/Intermediário</strong></li>
+                    <li data-key="cert16"><strong>LGPD: conhecendo e entendendo seus impactos</strong></li>
                 </ul>
             </section>
                       
         </div>
         
-    <!-- Nova seção de Publicações -->
     <section id="publicacoes" class="mb-12">
         <div class="card p-6 md:p-8">
-            <h2 class="section-title"><i class="fas fa-book mr-2 text-indigo-600"></i>Produções Acadêmicas com Base em Projetos Profissionais</h2>
+            <h2 class="section-title" data-key="publicationsTitle"><i class="fas fa-book mr-2 text-indigo-600"></i>Produções Acadêmicas com Base em Projetos Profissionais</h2>
             <div class="space-y-6">
                 <div><h3 class="font-semibold text-lg text-gray-800">2025</h3>
                     <ul class="list-disc list-inside text-gray-700">
-                        <!-- <li><strong>Desenvolvimento da leitura na alfabetização e rastreamento ocular na primeira infância.</strong> Revista Acervo Educacional. Projeto em parceria com a Universidade Estadual do Pará</li> -->
-                        <li><strong>Teaching Assistant Based on a Brazilian Large Language Model.</strong> Simpósio Brasileiro de Sistemas de Informação (SBSI)</li>
+                        <li data-key="pub2025_1"><strong>Teaching Assistant Based on a Brazilian Large Language Model.</strong> Simpósio Brasileiro de Sistemas de Informação (SBSI)</li>
                     </ul>
                 </div>
                 <div><h3 class="font-semibold text-lg text-gray-800">2024</h3>
                     <ul class="list-disc list-inside text-gray-700">
-                        <li><strong>Preservação da História e Cultura de um Município da Amazônia Tocantina a partir de um Jogo 2D.</strong> SBGAMES</li>
-                        <li><strong>Data-Driven Strategies for Achieving School Equity: Insights from Brazil and Policy Recommendations.</strong> IEEE</li>
+                        <li data-key="pub2024_1"><strong>Preservação da História e Cultura de um Município da Amazônia Tocantina a partir de um Jogo 2D.</strong> SBGAMES</li>
+                        <li data-key="pub2024_2"><strong>Data-Driven Strategies for Achieving School Equity: Insights from Brazil and Policy Recommendations.</strong> IEEE</li>
                     </ul>
                 </div>
                 <div><h3 class="font-semibold text-lg text-gray-800">2022</h3>
                     <ul class="list-disc list-inside text-gray-700">
-                        <li><strong>Aplicação de algoritmos de Random Forest no suporte à identificação das espécies Handroanthus serratifolius.</strong> BJD</li>
-                        <!-- <li><strong>Avaliação do Uso de um Sistema Web de Apoio à Aplicação de Estratégias de Gamificação.</strong> Computers on the Beach</li> -->
+                        <li data-key="pub2022_1"><strong>Aplicação de algoritmos de Random Forest no suporte à identificação das espécies Handroanthus serratifolius.</strong> BJD</li>
                     </ul>
                 </div>
                 <div><h3 class="font-semibold text-lg text-gray-800">2021</h3>
                     <ul class="list-disc list-inside text-gray-700">
-                        <li><strong>An automated approach to estimate player experience in game scenes from psychophysiological data.</strong> Multimedia Tools and Applications (Springer)</li>
+                        <li data-key="pub2021_1"><strong>An automated approach to estimate player experience in game scenes from psychophysiological data.</strong> Multimedia Tools and Applications (Springer)</li>
                     </ul>
                 </div>
                 <div><h3 class="font-semibold text-lg text-gray-800">2020</h3>
                     <ul class="list-disc list-inside text-gray-700">
-                        <li><strong>Temporal Prediction Model of the Evolution of Confirmed Cases of the New Coronavirus (SARS-CoV-2) in Brazil.</strong> IEEE Latin America Transactions</li>
+                        <li data-key="pub2020_1"><strong>Temporal Prediction Model of the Evolution of Confirmed Cases of the New Coronavirus (SARS-CoV-2) in Brazil.</strong> IEEE Latin America Transactions</li>
                     </ul>
                 </div>
                 <div><h3 class="font-semibold text-lg text-gray-800">2018</h3>
                     <ul class="list-disc list-inside text-gray-700">
-                        <li><strong>Estimating Player Experience from Arousal and Valence using Psychophysiological Signals.</strong> SBGAMES</li>
+                        <li data-key="pub2018_1"><strong>Estimating Player Experience from Arousal and Valence using Psychophysiological Signals.</strong> SBGAMES</li>
                     </ul>
                 </div>
                 <div><h3 class="font-semibold text-lg text-gray-800">2017</h3>
                     <ul class="list-disc list-inside text-gray-700">
-                        <li><strong>A Data Analysis of Player in World of Warcraft Using Game Data Mining.</strong> SBGAMES</li>
-                        <li><strong>Biofeedback Sensors in Electronic Games: A Practical Evaluation.</strong> SBGAMES</li>
+                        <li data-key="pub2017_1"><strong>A Data Analysis of Player in World of Warcraft Using Game Data Mining.</strong> SBGAMES</li>
+                        <li data-key="pub2017_2"><strong>Biofeedback Sensors in Electronic Games: A Practical Evaluation.</strong> SBGAMES</li>
                     </ul>
                 </div>               
                 <div><h3 class="font-semibold text-lg text-gray-800">2014</h3>
                     <ul class="list-disc list-inside text-gray-700">
-                        <li><strong>Biofeedback Sensors in Game Telemetry Research.</strong> SBGAMES</li>
+                        <li data-key="pub2014_1"><strong>Biofeedback Sensors in Game Telemetry Research.</strong> SBGAMES</li>
                     </ul>
                 </div>               
                
@@ -278,43 +272,179 @@
     </main>
 
     <footer class="bg-gray-800 text-white text-center p-6">
-        <p>&copy; <span id="currentYear"></span> Elton Sarmanho. Todos os direitos reservados.</p>        
+        <p>&copy; <span id="currentYear"></span> Elton Sarmanho. <span data-key="footerText">Todos os direitos reservados.</span></p>        
     </footer>
 
     <script>
-        // Define o ano atual no rodapé
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
-<script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    const enTexts = {
-        name: "Elton Sarmanho",
-        title: "Professor, Developer and Data Scientist - AI Specialist",
-        summary: "Professor at the Federal University of Pará (UFPA) with experience in Artificial Intelligence, Machine Learning, Big Data, information visualization, and Natural Language Processing. Data scientist and software developer with experience in Python. Works on projects with LangChain, OCR, psychophysiological data analysis, and semantic search systems.",
-        resumoTitle: "Professional Summary"
-    };
-    const ptTexts = {
-        name: "Elton Sarmanho",
-        title: "Professor, Desenvolvedor e Cientista de dados - Especialista em IA",
-        summary: "Professor na Universidade Federal do Pará (UFPA) com experiência em Inteligência Artificial, Aprendizado de Máquina, Big Data, visualização da informação e Processamento de Linguagem Natural. Cientista de dados e desenvolvedor de software com experiência em Python. Atua em projetos com LangChain, OCR, análise de dados psicofisiológicos e sistemas de busca semântica.",
-        resumoTitle: "Resumo Profissional"
-    };
+        const translations = {
+            en: {
+                profileTitle: "Professor, Developer and Data Scientist - AI Specialist",
+                professionalSummaryTitle: "Professional Summary",
+                professionalSummaryText: "Professor at the Federal University of Pará (UFPA) with experience in Artificial Intelligence, Machine Learning, Big Data, information visualization, and Natural Language Processing. Data scientist and software developer with experience in Python. Works on projects with LangChain, OCR, psychophysiological data analysis, and semantic search systems.",
+                educationTitle: "Education",
+                phdTitle: "PhD in Computer Science",
+                phdLocation: "University of Brasília (UnB), 2015-2022",
+                phdDescription: "Focus on AI, NLP, and Interactive Systems.",
+                mscTitle: "Master's in Information Technology",
+                mscLocation: "Federal University of Pará (UFPA), 2010-2012",
+                mscDescription: "Research in intelligent systems and accessibility.",
+                bachelorTitle: "Bachelor's in Information Systems",
+                bachelorLocation: "Federal University of Pará (UFPA), 2005-2009",
+                licentiateTitle: "Licentiate in Physics",
+                licentiateLocation: "Federal Center for Technological Education (CEFET-PA), 2005-2008",
+                licentiateDescription: "Research in remote sensing.",
+                experienceTitle: "Professional Experience",
+                assocProfTitle: "Associate Professor I",
+                assocProfLocation: "UFPA - Federal University of Pará, Cametá, PA (2012 - Present)",
+                assocProfDescription: "Director of the Faculty of Information Systems. Works in teaching, research, and extension in the areas of AI, applied computing, technology-assisted education, and LaTeX.",
+                backendDevTitle: "Backend Developer",
+                backendDevLocation: "Freelance, Belém, PA (2012 - Present)",
+                backendDevDescription: "Backend development in Python, REST APIs (FastAPI, Flask), databases (PostgreSQL, pgvector), LangChain, LLMs, OCR, NLP.",
+                founderTitle: "Founding Partner",
+                founderLocation: "Flow Design Consultancy (2022 - present)",
+                founderDescription: "Founder with a focus on strategic design and technology-based solutions. Location: Brasília, DF.",
+                projectsTitle: "Professional Projects",
+                iaraTitle: "IARA (Artificial Intelligence for Real Estate Records)",
+                iaraDescription: "System for automatic analysis and data extraction from real estate records (OCR, semantic embeddings, LLMs - OpenAI, Gemini, Maritaca). Implemented with LangChain, FastAPI, PostgreSQL, and Streamlit.",
+                rpaTitle: "RPA in Academic Process Automation",
+                rpaDescription: "Automations with Python and Google Workspace to optimize administrative processes at the Faculty of Information Systems of UFPA/Cametá.",
+                dashboardTitle: "Intelligent Workout Monitoring Dashboard",
+                dashboardDescription: "Visualization of physical workouts with graphs and AI-powered analysis, offering personalized recommendations.",
+                achievementsTitle: "Key Achievements",
+                achievement1: "Developed RPA to optimize processes, improving efficiency in administrative services.",
+                achievement2: "Implemented a training program, reducing operational errors.",
+                achievement3: "Implementation of systems in public and private administration.",
+                certificationsTitle: "Certifications",
+                cert1: "AI Applications with LangChain",
+                cert2: "Creating Web Apps with Streamlit",
+                cert3: "Computer Vision with OpenCV",
+                cert4: "MongoDB: getting to know a NoSQL database",
+                cert5: "Data Visualization: comparison and distribution charts",
+                cert6: "Spark: introducing the tool",
+                cert7: "Introduction to Natural Language Processing in Python",
+                cert8: "Dimensionality Reduction in Python",
+                cert9: "Artificial Intelligence to Predict Stock Prices",
+                cert10: "Machine Learning with scikit-learn",
+                cert11: "Introduction to Deep Learning in Python (PyTorch)",
+                cert12: "Creativity and New Technologies in Public Service",
+                cert13: "Machine Learning with Python: A Practical Introduction",
+                cert14: "English Written Production: B1 level paragraphs",
+                cert15: "Basic/Pre-Intermediate/Intermediate English",
+                cert16: "LGPD: knowing and understanding its impacts",
+                publicationsTitle: "Academic Productions Based on Professional Projects",
+                pub2025_1: "<strong>Teaching Assistant Based on a Brazilian Large Language Model.</strong> Simpósio Brasileiro de Sistemas de Informação (SBSI)",
+                pub2024_1: "<strong>Preservation of the History and Culture of a Municipality in the Tocantins Amazon through a 2D Game.</strong> SBGAMES",
+                pub2024_2: "<strong>Data-Driven Strategies for Achieving School Equity: Insights from Brazil and Policy Recommendations.</strong> IEEE",
+                pub2022_1: "<strong>Application of Random Forest algorithms to support the identification of Handroanthus serratifolius species.</strong> BJD",
+                pub2021_1: "<strong>An automated approach to estimate player experience in game scenes from psychophysiological data.</strong> Multimedia Tools and Applications (Springer)",
+                pub2020_1: "<strong>Temporal Prediction Model of the Evolution of Confirmed Cases of the New Coronavirus (SARS-CoV-2) in Brazil.</strong> IEEE Latin America Transactions",
+                pub2018_1: "<strong>Estimating Player Experience from Arousal and Valence using Psychophysiological Signals.</strong> SBGAMES",
+                pub2017_1: "<strong>A Data Analysis of Player in World of Warcraft Using Game Data Mining.</strong> SBGAMES",
+                pub2017_2: "<strong>Biofeedback Sensors in Electronic Games: A Practical Evaluation.</strong> SBGAMES",
+                pub2014_1: "<strong>Biofeedback Sensors in Game Telemetry Research.</strong> SBGAMES",
+                footerText: "All rights reserved."
+            },
+            pt: {
+                profileTitle: "Professor, Desenvolvedor e Cientista de dados - Especialista em IA",
+                professionalSummaryTitle: "Resumo Profissional",
+                professionalSummaryText: "Professor na Universidade Federal do Pará (UFPA) com experiência em Inteligência Artificial, Aprendizado de Máquina, Big Data, visualização da informação e Processamento de Linguagem Natural. Cientista de dados e desenvolvedor de software com experiência em Python. Atua em projetos com LangChain, OCR, análise de dados psicofisiológicos e sistemas de busca semântica.",
+                educationTitle: "Educação",
+                phdTitle: "Doutorado em Ciência da Computação",
+                phdLocation: "Universidade de Brasília (UnB), 2015-2022",
+                phdDescription: "Enfoque em IA, PLN e Sistemas Interativos.",
+                mscTitle: "Mestrado em Tecnologia da Informação",
+                mscLocation: "Universidade Federal do Pará (UFPA), 2010-2012",
+                mscDescription: "Pesquisa em sistemas inteligentes e acessibilidade.",
+                bachelorTitle: "Bacharelado em Sistemas de Informação",
+                bachelorLocation: "Universidade Federal do Pará (UFPA), 2005-2009",
+                licentiateTitle: "Licenciatura em Física",
+                licentiateLocation: "Centro Federal de Educação Tecnológica (CEFET-PA), 2005-2008",
+                licentiateDescription: "Pesquisas em sensoriamento remoto.",
+                experienceTitle: "Experiência Profissional",
+                assocProfTitle: "Professor Associado I",
+                assocProfLocation: "UFPA - Universidade Federal do Pará, Cametá, PA (2012 - Atual)",
+                assocProfDescription: "Diretor da Faculdade de Sistemas de Informação. Atua com ensino, pesquisa e extensão nas áreas de IA, computação aplicada, educação assistida por tecnologia e LaTeX.",
+                backendDevTitle: "Desenvolvedor Backend",
+                backendDevLocation: "Autônomo, Belém, PA (2012 - Atual)",
+                backendDevDescription: "Desenvolvimento backend em Python, APIs REST (FastAPI, Flask), bancos de dados (PostgreSQL, pgvector), LangChain, LLMs, OCR, NLP.",
+                founderTitle: "Sócio Fundador",
+                founderLocation: "Flow Design Consultancy (2022 - atual)",
+                founderDescription: "Atuação como fundador com foco em design estratégico e soluções baseadas em tecnologia. Local: Brasília, DF.",
+                projectsTitle: "Projetos Profissionais",
+                iaraTitle: "IARA (Inteligência Artificial para Registros de Imóveis)",
+                iaraDescription: "Sistema de análise e extração automática de dados de matrículas imobiliárias (OCR, embeddings semânticos, LLMs - OpenAI, Gemini, Maritaca). Implementado com LangChain, FastAPI, PostgreSQL e Streamlit.",
+                rpaTitle: "RPA na Automação de Processos Acadêmicos",
+                rpaDescription: "Automações com Python e Google Workspace para otimizar processos administrativos da Faculdade de Sistemas de Informação da UFPA/Cametá.",
+                dashboardTitle: "Dashboard Inteligente de Monitoramento de Treinos",
+                dashboardDescription: "Visualização de treinos físicos com gráficos e análises alimentadas por IA, oferecendo recomendações personalizadas.",
+                achievementsTitle: "Conquistas Chave",
+                achievement1: "Desenvolveu RPA para otimizar processos, melhorando a eficiência nos serviços administrativos.",
+                achievement2: "Implementou programa de treinamento, reduzindo erros operacionais.",
+                achievement3: "Implementação de sistemas na administração pública e privada.",
+                certificationsTitle: "Certificações",
+                cert1: "<strong>Aplicações de IA com LangChain</strong>",
+                cert2: "<strong>Criando Aplicativos Web com Streamlit</strong>",
+                cert3: "<strong>Visão Computacional com OpenCV</strong>",
+                cert4: "<strong>MongoDB: conhecendo um banco de dados NoSQL</strong>",
+                cert5: "<strong>Data Visualization: gráficos de comparação e distribuição</strong>",
+                cert6: "<strong>Spark: apresentando a ferramenta</strong>",
+                cert7: "<strong>Introduction to Natural Language Processing in Python</strong>",
+                cert8: "<strong>Dimensionality Reduction in Python</strong>",
+                cert9: "<strong>Inteligência Artificial para Prever Preços de Ações</strong>",
+                cert10: "<strong>Machine Learning with scikit-learn</strong>",
+                cert11: "<strong>Introduction to Deep Learning in Python (PyTorch)</strong>",
+                cert12: "<strong>Criatividade e Novas Tecnologias no Serviço Público</strong>",
+                cert13: "<strong>Machine Learning with Python: A Practical Introduction</strong>",
+                cert14: "<strong>Produção Escrita de Inglês: parágrafos nível B1</strong>",
+                cert15: "<strong>Inglês Básico/Pré-Intermediário/Intermediário</strong>",
+                cert16: "<strong>LGPD: conhecendo e entendendo seus impactos</strong>",
+                publicationsTitle: "Produções Acadêmicas com Base em Projetos Profissionais",
+                pub2025_1: "<strong>Teaching Assistant Based on a Brazilian Large Language Model.</strong> Simpósio Brasileiro de Sistemas de Informação (SBSI)",
+                pub2024_1: "<strong>Preservação da História e Cultura de um Município da Amazônia Tocantina a partir de um Jogo 2D.</strong> SBGAMES",
+                pub2024_2: "<strong>Data-Driven Strategies for Achieving School Equity: Insights from Brazil and Policy Recommendations.</strong> IEEE",
+                pub2022_1: "<strong>Aplicação de algoritmos de Random Forest no suporte à identificação das espécies Handroanthus serratifolius.</strong> BJD",
+                pub2021_1: "<strong>An automated approach to estimate player experience in game scenes from psychophysiological data.</strong> Multimedia Tools and Applications (Springer)",
+                pub2020_1: "<strong>Temporal Prediction Model of the Evolution of Confirmed Cases of the New Coronavirus (SARS-CoV-2) in Brazil.</strong> IEEE Latin America Transactions",
+                pub2018_1: "<strong>Estimating Player Experience from Arousal and Valence using Psychophysiological Signals.</strong> SBGAMES",
+                pub2017_1: "<strong>A Data Analysis of Player in World of Warcraft Using Game Data Mining.</strong> SBGAMES",
+                pub2017_2: "<strong>Biofeedback Sensors in Electronic Games: A Practical Evaluation.</strong> SBGAMES",
+                pub2014_1: "<strong>Biofeedback Sensors in Game Telemetry Research.</strong> SBGAMES",
+                footerText: "Todos os direitos reservados."
+            }
+        };
 
-    document.getElementById('lang-select').addEventListener('change', function(e) {
-        const lang = e.target.value;
-        if (lang === 'en') {
-            document.getElementById('profile-name').textContent = enTexts.name;
-            document.getElementById('profile-title').textContent = enTexts.title;
-            document.getElementById('profile-summary').textContent = enTexts.summary;
-            document.getElementById('resumo-title').innerHTML = '<i class="fas fa-user-tie mr-2 text-indigo-600"></i>' + enTexts.resumoTitle;
-        } else {
-            document.getElementById('profile-name').textContent = ptTexts.name;
-            document.getElementById('profile-title').textContent = ptTexts.title;
-            document.getElementById('profile-summary').textContent = ptTexts.summary;
-            document.getElementById('resumo-title').innerHTML = '<i class="fas fa-user-tie mr-2 text-indigo-600"></i>' + ptTexts.resumoTitle;
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.children.length > 0 && (element.children[0].tagName === 'I' || element.children[0].tagName === 'STRONG')) {
+                        const firstChild = element.children[0].outerHTML;
+                        element.innerHTML = firstChild + ' ' + translations[lang][key].replace(/<\/?strong>/g, '');
+                    } else if (key.startsWith('pub') || key.startsWith('cert')) {
+                         element.innerHTML = translations[lang][key];
+                    }
+                    else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            localStorage.setItem('lang', lang);
         }
-    });
-</script>
+
+        const langSelect = document.getElementById('lang-select');
+        
+        langSelect.addEventListener('change', function(e) {
+            setLanguage(e.target.value);
+        });
+
+        // Set initial language
+        const initialLang = localStorage.getItem('lang') || 'pt';
+        langSelect.value = initialLang;
+        setLanguage(initialLang);
+
+    </script>
 </body>
 </html>
