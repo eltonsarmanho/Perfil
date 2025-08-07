@@ -87,6 +87,11 @@
             </div>
         </div>
     </header>
+    <!-- Seletor de idioma -->
+<select id="lang-select" class="border border-gray-300 rounded px-2 py-1 text-sm ml-4 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+    <option value="pt">Português</option>
+    <option value="en">English</option>
+</select>
 
     <main class="container mx-auto max-w-5xl p-6 md:p-8">
 
@@ -277,6 +282,17 @@
         // Define o ano atual no rodapé
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
-
+<script>
+    // Define o ano atual no rodapé
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    // Seletor de idioma (exemplo simples)
+    document.getElementById('lang-select').addEventListener('change', function(e) {
+        if (e.target.value === 'en') {
+            alert('English version coming soon!');
+        } else {
+            alert('Versão em português!');
+        }
+    });
+</script>
 </body>
 </html>
