@@ -58,6 +58,36 @@
             background-color: white;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        .pdf-button {
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .pdf-button:hover {
+            background-color: #4338ca;
+        }
+        @media print {
+            body {
+                background-color: white;
+            }
+            .sticky-header {
+                position: static;
+                box-shadow: none;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #e5e7eb;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body class="antialiased text-gray-800">
@@ -84,7 +114,10 @@
                 </a>
                  <a href="http://lattes.cnpq.br/6836143760585970" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-indigo-600 icon-link text-2xl" title="Lattes CV">
                     <i class="fas fa-graduation-cap"></i> </a>
-                    <select id="lang-select" class="border border-gray-300 rounded px-2 py-1 text-sm ml-4 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                    <button id="generate-pdf-btn" class="pdf-button no-print ml-2" data-key="generatePdfButton" title="Gerar PDF">
+                        <i class="fas fa-file-pdf mr-1"></i>Gerar PDF
+                    </button>
+                    <select id="lang-select" class="border border-gray-300 rounded px-2 py-1 text-sm ml-2 no-print focus:outline-none focus:ring-2 focus:ring-indigo-600">
                 <option value="pt">🇧🇷 Português</option>
                 <option value="en">🇺🇸 English</option>
             </select>
@@ -143,6 +176,11 @@
                         <p class="text-sm text-gray-700 mt-1" data-key="assocProfDescription">Diretor da Faculdade de Sistemas de Informação. Atua com ensino, pesquisa e extensão nas áreas de IA, computação aplicada, educação assistida por tecnologia e LaTeX.</p>
                     </div>
                     <div>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="neesArchitectTitle">Arquiteto de Soluções</h3>
+                        <p class="text-gray-600" data-key="neesArchitectLocation">NEES - Núcleo de Excelência em Tecnologias Sociais (Atual)</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="neesArchitectDescription">Arquitetura de soluções digitais orientadas a impacto social, com integração de IA, automação e plataformas conversacionais.</p>
+                    </div>
+                    <div>
                         <h3 class="font-semibold text-lg text-gray-800" data-key="backendDevTitle">Desenvolvedor Backend</h3>
                         <p class="text-gray-600" data-key="backendDevLocation">Autônomo, Belém, PA (2012 - Atual)</p>
                         <p class="text-sm text-gray-700 mt-1" data-key="backendDevDescription">Desenvolvimento backend em Python, APIs REST (FastAPI, Flask), bancos de dados (PostgreSQL, pgvector), LangChain, LLMs, OCR, NLP.</p>
@@ -161,9 +199,33 @@
                 <h2 class="section-title" data-key="projectsTitle"><i class="fas fa-cogs mr-2 text-indigo-600"></i>Projetos Profissionais</h2>
                 <div class="space-y-6">
                     <div>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="fasitechTitle">FasiTech - Sistema de Gestão Acadêmica com IA e Automação</h3>
+                        <p class="text-gray-600">2023-2025</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="fasitechDescription">Implementação do FasiTech como sistema de gestão da Faculdade, com IA e automação de processos acadêmicos e administrativos.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="mecOmnichannelTitle">Solução Omnichannel com Chatwoot para o MEC</h3>
+                        <p class="text-gray-600">2025-Atual</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="mecOmnichannelDescription">Desenho e implementação de solução omnichannel para centralizar atendimentos e fluxos de comunicação institucional no MEC.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="bertOrchestratorTitle">Orquestrador de Mensagens com BERT</h3>
+                        <p class="text-gray-600">2025-Atual</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="bertOrchestratorDescription">Desenvolvimento de orquestrador de mensagens com treinamento e ajuste de modelo BERT para classificação e roteamento inteligente de demandas.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="wordGenTitle">Dashboard do Word Gen (Programa de Letramento de Harvard no Brasil)</h3>
+                        <p class="text-gray-600">2025</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="wordGenDescription">Criação do dashboard de monitoramento e análise para o programa Word Gen, apoiando decisões pedagógicas baseadas em dados.</p>
+                        <div class="mt-3">
+                            <img src="WordGen.png" alt="Dashboard do Word Gen" class="rounded-lg border border-gray-200 shadow-sm w-full max-w-md">
+                        </div>
+                    </div>
+                    <div>
                         <h3 class="font-semibold text-lg text-gray-800" data-key="iaraTitle">IARA (Inteligência Artificial para Registros de Imóveis)</h3>
                         <p class="text-gray-600">2024-2025</p>
                         <p class="text-sm text-gray-700 mt-1" data-key="iaraDescription">Sistema de análise e extração automática de dados de matrículas imobiliárias (OCR, embeddings semânticos, LLMs - OpenAI, Gemini, Maritaca). Implementado com LangChain, FastAPI, PostgreSQL e Streamlit.</p>
+                        <p class="text-sm mt-1"><a href="https://sol.sbc.org.br/index.php/sbsi_estendido/article/view/41998" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline" data-key="iaraLink">Ver publicação do IARA (SBSI Estendido)</a></p>
                     </div>
                     <div>
                         <h3 class="font-semibold text-lg text-gray-800" data-key="rpaTitle">RPA na Automação de Processos Acadêmicos</h3>
@@ -171,9 +233,15 @@
                         <p class="text-sm text-gray-700 mt-1" data-key="rpaDescription">Automações com Python e Google Workspace para otimizar processos administrativos da Faculdade de Sistemas de Informação da UFPA/Cametá.</p>
                     </div>
                     <div>
+                        <h3 class="font-semibold text-lg text-gray-800" data-key="eduModelsTitle">Modelos de IA para Educação</h3>
+                        <p class="text-gray-600">2024-Atual</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="eduModelsDescription">Criação e publicação de modelos de IA para aplicação educacional, incluindo geração de questões e apoio ao ensino-aprendizagem.</p>
+                        <p class="text-sm mt-1"><a href="https://huggingface.co/eltonsarmanho/qwen3-1.7b-questoes-matematica" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline" data-key="eduModelsLink">Modelo publicado no Hugging Face</a></p>
+                    </div>
+                    <div>
                         <h3 class="font-semibold text-lg text-gray-800" data-key="dashboardTitle">Dashboard Inteligente de Monitoramento de Treinos</h3>
                         <p class="text-gray-600">2024-2025</p>
-                        <p class="text-sm text-gray-700 mt-1" data-key="dashboardDescription">Visualização de treinos físicos com gráficos e análises alimentadas por IA, oferecendo recomendações personalizadas.</p>
+                        <p class="text-sm text-gray-700 mt-1" data-key="dashboardDescription">Painel de análise de treinos com indicadores e recomendações geradas por IA para acompanhamento de desempenho.</p>
                     </div>
                 </div>
             </div>
@@ -183,9 +251,15 @@
             <section id="conquistas" class="card p-6 md:p-8">
                 <h2 class="section-title" data-key="achievementsTitle"><i class="fas fa-trophy mr-2 text-indigo-600"></i>Conquistas Chave</h2>
                 <ul class="list-disc list-inside space-y-2 text-gray-700">
-                    <li data-key="achievement1">Desenvolveu RPA para otimizar processos, melhorando a eficiência nos serviços administrativos.</li>
-                    <li data-key="achievement2">Implementou programa de treinamento, reduzindo erros operacionais.</li>
-                    <li data-key="achievement3">Implementação de sistemas na administração pública e privada.</li>
+                    <li data-key="achievement1">2º colocado no Prêmio Inovação na Gestão Pública Educacional pela implementação do FasiTech como sistema de gestão da Faculdade, com IA e automação de processos.</li>
+                    <li>
+                        <img src="selo-sebrae.png" alt="Selo do Prêmio Inovação na Gestão Pública Educacional" class="mt-2 mb-2 rounded border border-gray-200 shadow-sm" style="max-width: 180px;">
+                    </li>
+                    <li data-key="achievement2">Criação do dashboard do Word Gen (Programa de Letramento de Harvard no Brasil) para monitoramento de indicadores pedagógicos.</li>
+                    <li data-key="achievement3">Publicação do IARA no SBSI Estendido e aplicação de IA para análise de registros de imóveis.</li>
+                    <li data-key="achievement4">Criação de modelos de IA para educação, com publicação no Hugging Face.</li>
+                    <li data-key="achievement5">Atuação como docente de Estatística e Ciência de Dados e como produtor/consultor de materiais sobre IA na Educação.</li>
+                    <li data-key="achievement6">Participação na criação do I Workshop on AIED Unplugged.</li>
                 </ul>
             </section>
 
@@ -213,6 +287,10 @@
                     <li data-key="cert14"><strong>Produção Escrita de Inglês: parágrafos nível B1</strong></li>
                     <li data-key="cert15"><strong>Inglês Básico/Pré-Intermediário/Intermediário</strong></li>
                     <li data-key="cert16"><strong>LGPD: conhecendo e entendendo seus impactos</strong></li>
+                    <li data-key="cert17"><strong>Fundamentos do Vibe Design (ASIMOV Academy Cursos Online, 2026)</strong></li>
+                    <li data-key="cert18"><strong>Masterclass Claude Code (ASIMOV Academy Cursos Online, 2026)</strong></li>
+                    <li data-key="cert19"><strong>Conceitos de Engenharia de Dados (ASIMOV Academy Cursos Online, 2026)</strong></li>
+                    <li data-key="cert20"><strong>Criando Agentes com Agno (ASIMOV Academy Cursos Online, 2026)</strong></li>
                 </ul>
             </section>
                       
@@ -222,6 +300,11 @@
         <div class="card p-6 md:p-8">
             <h2 class="section-title" data-key="publicationsTitle"><i class="fas fa-book mr-2 text-indigo-600"></i>Produções Acadêmicas com Base em Projetos Profissionais</h2>
             <div class="space-y-6">
+                <div><h3 class="font-semibold text-lg text-gray-800">2026</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li data-key="pub2026_1"><strong>PORTELA, Carlos S.; SIQUEIRA, Elton S.; SOUSA, Edinaldo H.; FREITAS, Gleyciane B.. IARA: Aplicação de Inteligência Artificial para Análise Automatizada de Matrículas Imobiliárias.</strong> In: TRILHA DE INDÚSTRIA E INOVAÇÃO EM SI - SIMPÓSIO BRASILEIRO DE SISTEMAS DE INFORMAÇÃO (SBSI), 22., 2026, Vitória/ES. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2026. p. 76-80. ISSN 3086-545X. DOI: <a href="https://doi.org/10.5753/sbsi_estendido.2026.248998" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">https://doi.org/10.5753/sbsi_estendido.2026.248998</a>.</li>
+                    </ul>
+                </div>
                 <div><h3 class="font-semibold text-lg text-gray-800">2025</h3>
                     <ul class="list-disc list-inside text-gray-700">
                         <li data-key="pub2025_1"><strong>Teaching Assistant Based on a Brazilian Large Language Model.</strong> Simpósio Brasileiro de Sistemas de Informação (SBSI)</li>
@@ -299,6 +382,9 @@
                 assocProfTitle: "Associate Professor I",
                 assocProfLocation: "UFPA - Federal University of Pará, Cametá, PA (2012 - Present)",
                 assocProfDescription: "Director of the Faculty of Information Systems. Works in teaching, research, and extension in the areas of AI, applied computing, technology-assisted education, and LaTeX.",
+                neesArchitectTitle: "Solutions Architect",
+                neesArchitectLocation: "NEES - Center of Excellence in Social Technologies (Present)",
+                neesArchitectDescription: "Design of digital solutions focused on social impact, integrating AI, automation, and conversational platforms.",
                 backendDevTitle: "Backend Developer",
                 backendDevLocation: "Freelance, Belém, PA (2012 - Present)",
                 backendDevDescription: "Backend development in Python, REST APIs (FastAPI, Flask), databases (PostgreSQL, pgvector), LangChain, LLMs, OCR, NLP.",
@@ -307,15 +393,31 @@
                 founderDescription: "Founder with a focus on strategic design and technology-based solutions. Location: Brasília, DF.",
                 projectsTitle: "Professional Projects",
                 iaraTitle: "IARA (Artificial Intelligence for Real Estate Records)",
-                iaraDescription: "System for automatic analysis and data extraction from real estate records (OCR, semantic embeddings, LLMs - OpenAI, Gemini, Maritaca). Implemented with LangChain, FastAPI, PostgreSQL, and Streamlit.",
+                iaraDescription: "AI system for extracting and structuring data from real estate records using OCR, semantic embeddings, and LLMs. Implemented with LangChain, FastAPI, PostgreSQL, and Streamlit.",
+                iaraLink: "View IARA publication (SBSI Extended)",
+                fasitechTitle: "FasiTech - Academic Management System with AI and Automation",
+                fasitechDescription: "Led the implementation of FasiTech as the Faculty management platform, integrating AI and workflow automation in academic and administrative operations.",
+                mecOmnichannelTitle: "Omnichannel Solution with Chatwoot for the Ministry of Education",
+                mecOmnichannelDescription: "Designed and implemented an omnichannel solution to centralize service and institutional communication workflows at the Ministry of Education.",
+                bertOrchestratorTitle: "Message Orchestrator with BERT",
+                bertOrchestratorDescription: "Developed a message orchestrator with BERT training and fine-tuning for intelligent demand classification and routing.",
                 rpaTitle: "RPA in Academic Process Automation",
-                rpaDescription: "Automations with Python and Google Workspace to optimize administrative processes at the Faculty of Information Systems of UFPA/Cametá.",
+                rpaDescription: "Delivered Python and Google Workspace automations to reduce manual workload in administrative routines at UFPA/Cameta.",
+                eduModelsTitle: "AI Models for Education",
+                eduModelsDescription: "Development and publication of AI models for educational use, including question generation and classroom support.",
+                eduModelsLink: "Model published on Hugging Face",
                 dashboardTitle: "Intelligent Workout Monitoring Dashboard",
-                dashboardDescription: "Visualization of physical workouts with graphs and AI-powered analysis, offering personalized recommendations.",
+                dashboardDescription: "Training analytics dashboard with performance indicators and AI-based recommendations.",
+                wordGenTitle: "Word Gen Dashboard (Harvard Literacy Program in Brazil)",
+                wordGenDescription: "Built the monitoring dashboard for the Word Gen program to track pedagogical indicators and support instructional decisions.",
                 achievementsTitle: "Key Achievements",
-                achievement1: "Developed RPA to optimize processes, improving efficiency in administrative services.",
-                achievement2: "Implemented a training program, reducing operational errors.",
-                achievement3: "Implementation of systems in public and private administration.",
+                achievement1: "2nd place in the Innovation Award in Public Educational Management for implementing FasiTech as the Faculty management system with AI and process automation.",
+                achievement2: "Built the Word Gen Dashboard (Harvard Literacy Program in Brazil) for pedagogical indicator monitoring.",
+                achievement3: "Published IARA at SBSI Extended and applied AI to real estate record analysis.",
+                achievement4: "Created AI models for education, with publication on Hugging Face.",
+                achievement5: "Teaches Statistics and Data Science and works as a producer/consultant of materials on AI in Education.",
+                achievement6: "Co-created the 1st Workshop on AIED Unplugged.",
+                generatePdfButton: "Generate PDF",
                 certificationsTitle: "Certifications",
                 cert1: "AI Applications with LangChain",
                 cert2: "Creating Web Apps with Streamlit",
@@ -333,7 +435,12 @@
                 cert14: "English Written Production: B1 level paragraphs",
                 cert15: "Basic/Pre-Intermediate/Intermediate English",
                 cert16: "LGPD: knowing and understanding its impacts",
+                cert17: "Vibe Design Fundamentals (ASIMOV Academy Online Courses, 2026)",
+                cert18: "Claude Code Masterclass (ASIMOV Academy Online Courses, 2026)",
+                cert19: "Data Engineering Concepts (ASIMOV Academy Online Courses, 2026)",
+                cert20: "Building Agents with Agno (ASIMOV Academy Online Courses, 2026)",
                 publicationsTitle: "Academic Productions Based on Professional Projects",
+                pub2026_1: "<strong>PORTELA, Carlos S.; SIQUEIRA, Elton S.; SOUSA, Edinaldo H.; FREITAS, Gleyciane B.. IARA: Application of Artificial Intelligence for Automated Analysis of Real Estate Records.</strong> In: Industry and Innovation Track in IS - Brazilian Symposium on Information Systems (SBSI), 22., 2026, Vitoria/ES. Proceedings [...]. Porto Alegre: Brazilian Computer Society, 2026. p. 76-80. ISSN 3086-545X. DOI: <a href=\"https://doi.org/10.5753/sbsi_estendido.2026.248998\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 hover:underline\">https://doi.org/10.5753/sbsi_estendido.2026.248998</a>.",
                 pub2025_1: "<strong>Teaching Assistant Based on a Brazilian Large Language Model.</strong> Simpósio Brasileiro de Sistemas de Informação (SBSI)",
                 pub2024_1: "<strong>Preservation of the History and Culture of a Municipality in the Tocantins Amazon through a 2D Game.</strong> SBGAMES",
                 pub2024_2: "<strong>Data-Driven Strategies for Achieving School Equity: Insights from Brazil and Policy Recommendations.</strong> IEEE",
@@ -366,6 +473,9 @@
                 assocProfTitle: "Professor Associado I",
                 assocProfLocation: "UFPA - Universidade Federal do Pará, Cametá, PA (2012 - Atual)",
                 assocProfDescription: "Diretor da Faculdade de Sistemas de Informação. Atua com ensino, pesquisa e extensão nas áreas de IA, computação aplicada, educação assistida por tecnologia e LaTeX.",
+                neesArchitectTitle: "Arquiteto de Soluções",
+                neesArchitectLocation: "NEES - Núcleo de Excelência em Tecnologias Sociais (Atual)",
+                neesArchitectDescription: "Arquitetura de soluções digitais orientadas a impacto social, com integração de IA, automação e plataformas conversacionais.",
                 backendDevTitle: "Desenvolvedor Backend",
                 backendDevLocation: "Autônomo, Belém, PA (2012 - Atual)",
                 backendDevDescription: "Desenvolvimento backend em Python, APIs REST (FastAPI, Flask), bancos de dados (PostgreSQL, pgvector), LangChain, LLMs, OCR, NLP.",
@@ -374,15 +484,31 @@
                 founderDescription: "Atuação como fundador com foco em design estratégico e soluções baseadas em tecnologia. Local: Brasília, DF.",
                 projectsTitle: "Projetos Profissionais",
                 iaraTitle: "IARA (Inteligência Artificial para Registros de Imóveis)",
-                iaraDescription: "Sistema de análise e extração automática de dados de matrículas imobiliárias (OCR, embeddings semânticos, LLMs - OpenAI, Gemini, Maritaca). Implementado com LangChain, FastAPI, PostgreSQL e Streamlit.",
+                iaraDescription: "Sistema de IA para extração e estruturação de dados de matrículas imobiliárias com OCR, embeddings semânticos e LLMs. Implementado com LangChain, FastAPI, PostgreSQL e Streamlit.",
+                iaraLink: "Ver publicação do IARA (SBSI Estendido)",
+                fasitechTitle: "FasiTech - Sistema de Gestão Acadêmica com IA e Automação",
+                fasitechDescription: "Liderança da implementação do FasiTech como plataforma de gestão da Faculdade, com IA e automação de fluxos acadêmicos e administrativos.",
+                mecOmnichannelTitle: "Solução Omnichannel com Chatwoot para o MEC",
+                mecOmnichannelDescription: "Desenho e implementação de solução omnichannel para centralizar atendimentos e fluxos de comunicação institucional no MEC.",
+                bertOrchestratorTitle: "Orquestrador de Mensagens com BERT",
+                bertOrchestratorDescription: "Desenvolvimento de orquestrador de mensagens com treinamento e ajuste de modelo BERT para classificação e roteamento inteligente de demandas.",
                 rpaTitle: "RPA na Automação de Processos Acadêmicos",
-                rpaDescription: "Automações com Python e Google Workspace para otimizar processos administrativos da Faculdade de Sistemas de Informação da UFPA/Cametá.",
+                rpaDescription: "Entrega de automações com Python e Google Workspace para reduzir atividades manuais em rotinas administrativas da UFPA/Cameta.",
+                eduModelsTitle: "Modelos de IA para Educação",
+                eduModelsDescription: "Desenvolvimento e publicação de modelos de IA para uso educacional, incluindo geração de questões e apoio didático.",
+                eduModelsLink: "Modelo publicado no Hugging Face",
                 dashboardTitle: "Dashboard Inteligente de Monitoramento de Treinos",
-                dashboardDescription: "Visualização de treinos físicos com gráficos e análises alimentadas por IA, oferecendo recomendações personalizadas.",
+                dashboardDescription: "Painel de análise de treinos com indicadores de desempenho e recomendações geradas por IA.",
+                wordGenTitle: "Dashboard do Word Gen (Programa de Letramento de Harvard no Brasil)",
+                wordGenDescription: "Criação do dashboard de monitoramento do programa Word Gen para acompanhamento de indicadores pedagógicos e suporte à decisão educacional.",
                 achievementsTitle: "Conquistas Chave",
-                achievement1: "Desenvolveu RPA para otimizar processos, melhorando a eficiência nos serviços administrativos.",
-                achievement2: "Implementou programa de treinamento, reduzindo erros operacionais.",
-                achievement3: "Implementação de sistemas na administração pública e privada.",
+                achievement1: "2º colocado no Prêmio Inovação na Gestão Pública Educacional pela implementação do FasiTech como sistema de gestão da Faculdade, com IA e automação de processos.",
+                achievement2: "Criação do dashboard do Word Gen (Programa de Letramento de Harvard no Brasil) para monitoramento de indicadores pedagógicos.",
+                achievement3: "Publicação do IARA no SBSI Estendido e aplicação de IA para análise de registros de imóveis.",
+                achievement4: "Criação de modelos de IA para educação, com publicação no Hugging Face.",
+                achievement5: "Atuação como docente de Estatística e Ciência de Dados e como produtor/consultor de materiais sobre IA na Educação.",
+                achievement6: "Participação na criação do I Workshop on AIED Unplugged.",
+                generatePdfButton: "Gerar PDF",
                 certificationsTitle: "Certificações",
                 cert1: "<strong>Aplicações de IA com LangChain</strong>",
                 cert2: "<strong>Criando Aplicativos Web com Streamlit</strong>",
@@ -400,7 +526,12 @@
                 cert14: "<strong>Produção Escrita de Inglês: parágrafos nível B1</strong>",
                 cert15: "<strong>Inglês Básico/Pré-Intermediário/Intermediário</strong>",
                 cert16: "<strong>LGPD: conhecendo e entendendo seus impactos</strong>",
+                cert17: "<strong>Fundamentos do Vibe Design (ASIMOV Academy Cursos Online, 2026)</strong>",
+                cert18: "<strong>Masterclass Claude Code (ASIMOV Academy Cursos Online, 2026)</strong>",
+                cert19: "<strong>Conceitos de Engenharia de Dados (ASIMOV Academy Cursos Online, 2026)</strong>",
+                cert20: "<strong>Criando Agentes com Agno (ASIMOV Academy Cursos Online, 2026)</strong>",
                 publicationsTitle: "Produções Acadêmicas com Base em Projetos Profissionais",
+                pub2026_1: "<strong>PORTELA, Carlos S.; SIQUEIRA, Elton S.; SOUSA, Edinaldo H.; FREITAS, Gleyciane B.. IARA: Aplicação de Inteligência Artificial para Análise Automatizada de Matrículas Imobiliárias.</strong> In: TRILHA DE INDÚSTRIA E INOVAÇÃO EM SI - SIMPÓSIO BRASILEIRO DE SISTEMAS DE INFORMAÇÃO (SBSI), 22., 2026, Vitória/ES. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2026. p. 76-80. ISSN 3086-545X. DOI: <a href=\"https://doi.org/10.5753/sbsi_estendido.2026.248998\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 hover:underline\">https://doi.org/10.5753/sbsi_estendido.2026.248998</a>.",
                 pub2025_1: "<strong>Teaching Assistant Based on a Brazilian Large Language Model.</strong> Simpósio Brasileiro de Sistemas de Informação (SBSI)",
                 pub2024_1: "<strong>Preservação da História e Cultura de um Município da Amazônia Tocantina a partir de um Jogo 2D.</strong> SBGAMES",
                 pub2024_2: "<strong>Data-Driven Strategies for Achieving School Equity: Insights from Brazil and Policy Recommendations.</strong> IEEE",
@@ -435,6 +566,11 @@
         }
 
         const langSelect = document.getElementById('lang-select');
+        const generatePdfBtn = document.getElementById('generate-pdf-btn');
+
+        generatePdfBtn.addEventListener('click', function() {
+            window.print();
+        });
         
         langSelect.addEventListener('change', function(e) {
             setLanguage(e.target.value);
