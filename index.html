@@ -72,20 +72,154 @@
         .pdf-button:hover {
             background-color: #4338ca;
         }
+        .print-only {
+            display: none;
+        }
+        @page {
+            size: A4;
+            margin: 12mm 12mm 12mm 12mm;
+        }
         @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
             body {
-                background-color: white;
-            }
-            .sticky-header {
-                position: static;
-                box-shadow: none;
-            }
-            .card {
-                box-shadow: none;
-                border: 1px solid #e5e7eb;
+                background: #ffffff !important;
+                color: #1f2937 !important;
+                font-size: 9.5pt;
             }
             .no-print {
                 display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            main {
+                padding: 0 !important;
+                max-width: 100% !important;
+            }
+            .sticky-header {
+                position: static !important;
+                box-shadow: none !important;
+                background: linear-gradient(135deg, #1e1b4b 0%, #312e81 55%, #4f46e5 100%) !important;
+                padding: 22px 26px !important;
+                border-radius: 14px;
+                margin-bottom: 18px;
+            }
+            .sticky-header h1 {
+                color: #ffffff !important;
+                font-size: 24pt !important;
+                letter-spacing: 0.3px;
+            }
+            .sticky-header p[data-key="profileTitle"] {
+                color: #c7d2fe !important;
+                font-size: 11pt !important;
+            }
+            .sticky-header .profile-img {
+                width: 110px !important;
+                height: 110px !important;
+                border: 3px solid #ffffff !important;
+                box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
+            }
+            .contact-print {
+                display: flex !important;
+                flex-wrap: wrap;
+                gap: 4px 14px;
+                margin-top: 10px;
+                font-size: 8.5pt;
+                color: #e0e7ff;
+            }
+            .card {
+                box-shadow: none !important;
+                border: none !important;
+                border-radius: 0 !important;
+                padding: 0 !important;
+                transform: none !important;
+                background: transparent !important;
+            }
+            section {
+                margin-bottom: 14px !important;
+            }
+            .section-title {
+                font-size: 11pt !important;
+                font-weight: 700 !important;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                color: #312e81 !important;
+                border-bottom: 1.5px solid #c7d2fe !important;
+                padding-bottom: 4px !important;
+                margin-bottom: 10px !important;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+            .section-title i {
+                display: none !important;
+            }
+            h3 {
+                font-size: 10pt !important;
+                color: #111827 !important;
+            }
+            p, li {
+                font-size: 9pt !important;
+                line-height: 1.45 !important;
+            }
+            #resumo p {
+                font-size: 9.5pt !important;
+                text-align: justify;
+            }
+            .grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 16px !important;
+            }
+            #projetos .space-y-6 > div,
+            #educacao li,
+            #experiencia .space-y-6 > div,
+            #publicacoes li,
+            #certificacoes li {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            #projetos .space-y-6 > div,
+            #experiencia .space-y-6 > div {
+                border-bottom: 1px dotted #d1d5db;
+                padding-bottom: 6px;
+                margin-bottom: 6px;
+            }
+            #projetos .space-y-6 > div:last-child,
+            #experiencia .space-y-6 > div:last-child {
+                border-bottom: none;
+            }
+            #educacao ul > li,
+            #educacao li + li {
+                margin-top: 6px;
+            }
+            #projetos img[src="WordGen.png"] {
+                display: none !important;
+            }
+            #projetos a,
+            #experiencia a,
+            #conquistas a {
+                color: #4338ca !important;
+                text-decoration: none !important;
+            }
+            #publicacoes li {
+                font-size: 8pt !important;
+                margin-bottom: 3px;
+            }
+            #certificacoes img {
+                max-width: 130px !important;
+            }
+            #conquistas li {
+                break-inside: avoid;
+            }
+            footer {
+                background: transparent !important;
+                color: #6b7280 !important;
+                border-top: 1px solid #e5e7eb;
+                padding: 10px 0 0 !important;
+                font-size: 8pt;
             }
         }
     </style>
@@ -100,9 +234,15 @@
                 <div>
                     <h1 class="text-3xl md:text-4xl font-bold text-gray-900" id="profile-name">Elton Sarmanho</h1>
                     <p class="text-xl text-indigo-600 font-medium" data-key="profileTitle">Professor, Desenvolvedor e Cientista de dados - Especialista em IA</p>
+                    <div class="contact-print print-only">
+                        <span>eltonss@ufpa.br</span>
+                        <span>linkedin.com/in/elton-sarmanho-836553185</span>
+                        <span>github.com/eltonsarmanho</span>
+                        <span>lattes.cnpq.br/6836143760585970</span>
+                    </div>
                 </div>
             </div>
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 no-print">
                 <a href="mailto:eltonss@ufpa.br" class="text-gray-600 hover:text-indigo-600 icon-link text-2xl" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
@@ -584,7 +724,10 @@
         const generatePdfBtn = document.getElementById('generate-pdf-btn');
 
         generatePdfBtn.addEventListener('click', function() {
+            const previousTitle = document.title;
+            document.title = 'CV - Elton Sarmanho';
             window.print();
+            document.title = previousTitle;
         });
         
         langSelect.addEventListener('change', function(e) {
