@@ -75,19 +75,59 @@
         .print-only {
             display: none;
         }
+        .pf-head, .pf-foot {
+            display: none;
+        }
         @page {
             size: A4;
-            margin: 12mm 12mm 12mm 12mm;
+            margin: 0;
         }
         @media print {
             * {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
+            .print-frame {
+                display: table;
+                width: 100%;
+            }
+            .pf-head, .pf-foot {
+                display: table-header-group;
+            }
+            .pf-foot {
+                display: table-footer-group;
+            }
+            .pf-body {
+                display: table-row-group;
+            }
+            .pf-space {
+                height: 13mm;
+            }
             body {
                 background: #ffffff !important;
                 color: #1f2937 !important;
                 font-size: 9.5pt;
+                padding: 0 13mm !important;
+            }
+            .space-y-6 > * + *, .space-y-4 > * + *, .space-y-8 > * + * {
+                margin-top: 0 !important;
+            }
+            #certificacoes ul {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr;
+                gap: 3px 18px;
+            }
+            #certificacoes .my-4 {
+                margin: 0 0 8px 0 !important;
+                text-align: left !important;
+            }
+            #certificacoes img {
+                max-width: 90px !important;
+                margin: 0 !important;
+            }
+            #conquistas ul {
+                list-style-position: outside !important;
+                padding-left: 14px;
             }
             .no-print {
                 display: none !important;
@@ -181,11 +221,11 @@
                 break-inside: avoid;
                 page-break-inside: avoid;
             }
-            #projetos .space-y-6 > div,
+                #projetos .space-y-6 > div,
             #experiencia .space-y-6 > div {
                 border-bottom: 1px dotted #d1d5db;
-                padding-bottom: 6px;
-                margin-bottom: 6px;
+                padding-bottom: 5px;
+                margin-bottom: 5px;
             }
             #projetos .space-y-6 > div:last-child,
             #experiencia .space-y-6 > div:last-child {
@@ -225,6 +265,9 @@
     </style>
 </head>
 <body class="antialiased text-gray-800">
+<div class="print-frame">
+<div class="pf-head"><div class="pf-space"></div></div>
+<div class="pf-body">
 
     <header class="sticky-header p-6 md:p-8">
         <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between">
@@ -504,6 +547,9 @@
     <footer class="bg-gray-800 text-white text-center p-6">
         <p>&copy; <span id="currentYear"></span> Elton Sarmanho. <span data-key="footerText">Todos os direitos reservados.</span></p>        
     </footer>
+</div>
+<div class="pf-foot"><div class="pf-space"></div></div>
+</div>
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -705,13 +751,14 @@
             document.querySelectorAll('[data-key]').forEach(element => {
                 const key = element.getAttribute('data-key');
                 if (translations[lang] && translations[lang][key]) {
-                    if (element.children.length > 0 && (element.children[0].tagName === 'I' || element.children[0].tagName === 'STRONG')) {
+                    if (key.startsWith('cert')) {
+                        element.innerHTML = '<strong>' + translations[lang][key].replace(/<\/?strong>/g, '') + '</strong>';
+                    } else if (key.startsWith('pub')) {
+                        element.innerHTML = translations[lang][key];
+                    } else if (element.children.length > 0 && (element.children[0].tagName === 'I' || element.children[0].tagName === 'STRONG')) {
                         const firstChild = element.children[0].outerHTML;
                         element.innerHTML = firstChild + ' ' + translations[lang][key].replace(/<\/?strong>/g, '');
-                    } else if (key.startsWith('pub') || key.startsWith('cert')) {
-                         element.innerHTML = translations[lang][key];
-                    }
-                    else {
+                    } else {
                         element.textContent = translations[lang][key];
                     }
                 }
